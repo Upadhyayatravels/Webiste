@@ -11,8 +11,8 @@ export const vehicles = [
     ],
     seats: "13/16/17/20 Seats",
     extras: "Toll tax + Driver allowance included",
-    minRunning: "8 hours per day",
-    features: ["Music System", "AC", "LCD TV", "Comfortable Seating", "USB Charging"]
+    minRunning: "Luxury And Deluxe",
+    features: ["Music System", "High Back Seat", "Neat And Clean", "First Aid Box", "Fire Cylinder" , "Luggage Storage Capacity","Icebox Optional" , "Bus Location Tracker" ,"LED TV (Luxury)" , "AC (Luxury)" ,"Fan On Every Seats (Luxury)" ,"Profile Light (Luxury)", "Sofa Cum Bed (Luxury)","Chager on every Seats (Luxury)"]
   },
   {
     id: 2,
@@ -24,8 +24,8 @@ export const vehicles = [
     ],
     seats: "49/52/53/55 Seats",
     extras: "Toll tax + Parking + Driver allowance included",
-    minRunning: "10 hours per day",
-    features: ["WiFi", "AC", "Entertainment System", "Restroom", "Reclining Seats"]
+    minRunning: "Tata , Eicher , Leyland all in Deluxe and Luxury",
+    features: ["Music System", "High Back Seat", "Neat And Clean", "First Aid Box", "Fire Cylinder" , "Luggage Storage Capacity","Icebox Optional" , "Bus Location Tracker" ,"LED TV (Luxury)" , "AC (Luxury)" ,"Fan On Every Seats (Luxury)" ,"Profile Light (Luxury)", "Sofa Cum Bed (Luxury)","Chager on every Seats (Luxury)"]
   },
   {
     id: 3,
@@ -36,10 +36,10 @@ export const vehicles = [
       "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-ai1mokj9ix.jpg",
       "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-ystmd6e6et.jpg"
     ],
-    seats: "16 Seats",
+    seats: "21/23/25/28 Seats",
     extras: "Toll tax + Refreshments included",
-    minRunning: "6 hours per day",
-    features: ["Premium Audio", "Climate Control", "Leather Seats", "Ambient Lighting"]
+    minRunning: "SML , Eicher all in Deluxe and Luxury",
+    features: ["Music System", "High Back Seat", "Neat And Clean", "First Aid Box", "Fire Cylinder" , "Luggage Storage Capacity","Icebox Optional" , "Bus Location Tracker" ,"LED TV (Luxury)" , "AC (Luxury)" ,"Fan On Every Seats (Luxury)" ,"Profile Light (Luxury)", "Sofa Cum Bed (Luxury)","Chager on every Seats (Luxury)"]
   },
   {
     id: 4,
@@ -52,8 +52,8 @@ export const vehicles = [
     ],
     seats: "6 Seats",
     extras: "Toll tax + Party setup included",
-    minRunning: "5 hours per day",
-    features: ["DJ Setup", "LED Lighting", "Mini Bar Setup", "Dance Floor"]
+    minRunning: "Ertiga , Innova Crysta",
+    features: ["Music System", "High Back Seat", "Neat And Clean", "First Aid Box", "Fire Cylinder" , "Luggage Storage Capacity","Icebox Optional" , "Bus Location Tracker" ,"LED TV (Luxury)" , "AC (Luxury)" ,"Fan On Every Seats (Luxury)" ,"Profile Light (Luxury)", "Sofa Cum Bed (Luxury)","Chager on every Seats (Luxury)"]
   },
   {
     id: 5,
@@ -65,114 +65,25 @@ export const vehicles = [
       "https://via.placeholder.com/400x300?text=Image+4",
       "https://via.placeholder.com/400x300?text=Image+5",
     ],
-    seats: "40 Seats",
+    seats: "4 Seats",
     extras: "Driver + Assistant included",
     minRunning: "12 hours per day",
-    features: ["Safety Features", "AC", "GPS Tracking", "First Aid Kit"]
+    features: ["Music System", "High Back Seat", "Neat And Clean", "First Aid Box", "Fire Cylinder" , "Luggage Storage Capacity","Icebox Optional" , "Bus Location Tracker" ,"LED TV (Luxury)" , "AC (Luxury)" ,"Fan On Every Seats (Luxury)" ,"Profile Light (Luxury)", "Sofa Cum Bed (Luxury)","Chager on every Seats (Luxury)"]
   },
   {
     id: 6,
-    name: "Tourist Coach",
+    name: "Mini Bus",
     image: [
-      "https://via.placeholder.com/400x300?text=Image+1",
-      "https://via.placeholder.com/400x300?text=Image+2",
-      "https://via.placeholder.com/400x300?text=Image+3",
-      "https://via.placeholder.com/400x300?text=Image+4",
-      "https://via.placeholder.com/400x300?text=Image+5",
+      "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-ui2f1qdapc.jpg",
+      "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-caf98ym13l.jpg",
+      
+      "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-ai1mokj9ix.jpg",
+      "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-ystmd6e6et.jpg"
     ],
-    seats: "50 Seats",
+    seats: "30/32/40 Seats",
     extras: "Toll tax + Tourist guide included",
     minRunning: "24 hours per day",
-    features: ["Panoramic Windows", "Guide System", "Luggage Storage", "Coffee Machine"]
+    features: ["Music System", "High Back Seat", "Neat And Clean", "First Aid Box", "Fire Cylinder" , "Luggage Storage Capacity","Icebox Optional" , "Bus Location Tracker" ,"LED TV (Luxury)" , "AC (Luxury)" ,"Fan On Every Seats (Luxury)" ,"Profile Light (Luxury)", "Sofa Cum Bed (Luxury)","Chager on every Seats (Luxury)"]
   },
-  {
-    id: 7,
-    name: "VIP Shuttle",
-    image: [
-      "https://via.placeholder.com/400x300?text=Image+1",
-      "https://via.placeholder.com/400x300?text=Image+2",
-      "https://via.placeholder.com/400x300?text=Image+3",
-      "https://via.placeholder.com/400x300?text=Image+4",
-      "https://via.placeholder.com/400x300?text=Image+5",
-    ],
-    seats: "12 Seats",
-    extras: "Premium service package included",
-    minRunning: "4 hours per day",
-    features: ["Premium Interior", "Privacy Glass", "Work Tables", "Mini Fridge"]
-  },
-  {
-    id: 8,
-    name: "Airport Transfer Bus",
-    image: [
-      "https://via.placeholder.com/400x300?text=Image+1",
-      "https://via.placeholder.com/400x300?text=Image+2",
-      "https://via.placeholder.com/400x300?text=Image+3",
-      "https://via.placeholder.com/400x300?text=Image+4",
-      "https://via.placeholder.com/400x300?text=Image+5",
-    ],
-    seats: "30 Seats",
-    extras: "Luggage handling included",
-    minRunning: "12 hours per day",
-    features: ["Luggage Racks", "Flight Info Display", "WiFi", "USB Charging"]
-  },
-  {
-    id: 9,
-    name: "Corporate Shuttle",
-    image: [
-      "https://via.placeholder.com/400x300?text=Image+1",
-      "https://via.placeholder.com/400x300?text=Image+2",
-      "https://via.placeholder.com/400x300?text=Image+3",
-      "https://via.placeholder.com/400x300?text=Image+4",
-      "https://via.placeholder.com/400x300?text=Image+5",
-    ],
-    seats: "22 Seats",
-    extras: "Corporate branding options available",
-    minRunning: "10 hours per day",
-    features: ["Work Tables", "Power Outlets", "WiFi", "Coffee Service"]
-  },
-  {
-    id: 10,
-    name: "Wedding Special",
-    image:[
-      "https://via.placeholder.com/400x300?text=Image+1",
-      "https://via.placeholder.com/400x300?text=Image+2",
-      "https://via.placeholder.com/400x300?text=Image+3",
-      "https://via.placeholder.com/400x300?text=Image+4",
-      "https://via.placeholder.com/400x300?text=Image+5",
-    ],
-    seats: "35 Seats",
-    extras: "Decoration + Champagne service included",
-    minRunning: "6 hours per day",
-    features: ["Decorated Interior", "Photo Booth", "Sound System", "Champagne Bar"]
-  },
-  {
-    id: 11,
-    name: "Sports Team Bus",
-    image: [
-      "https://via.placeholder.com/400x300?text=Image+1",
-      "https://via.placeholder.com/400x300?text=Image+2",
-      "https://via.placeholder.com/400x300?text=Image+3",
-      "https://via.placeholder.com/400x300?text=Image+4",
-      "https://via.placeholder.com/400x300?text=Image+5",
-    ],
-    seats: "45 Seats",
-    extras: "Sports equipment storage included",
-    minRunning: "8 hours per day",
-    features: ["Equipment Storage", "Recovery Station", "Team Branding", "Ice Boxes"]
-  },
-  {
-    id: 12,
-    name: "Eco-Friendly Bus",
-    image: [
-      "https://via.placeholder.com/400x300?text=Image+1",
-      "https://via.placeholder.com/400x300?text=Image+2",
-      "https://via.placeholder.com/400x300?text=Image+3",
-      "https://via.placeholder.com/400x300?text=Image+4",
-      "https://via.placeholder.com/400x300?text=Image+5",
-    ],
-    seats: "38 Seats",
-    extras: "Carbon offset program included",
-    minRunning: "10 hours per day",
-    features: ["Electric/Hybrid Engine", "Solar Panels", "Eco-Friendly Materials", "Energy Monitor"]
-  }
+
 ];

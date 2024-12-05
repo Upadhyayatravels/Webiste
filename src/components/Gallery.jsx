@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 const Gallery = () => {
   const galleryImages = [
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery1.jpg",
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery2.jpg",
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery7.jpg",
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery5.jpg",
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery-3.jpg",
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery4.jpg",
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery6.jpg",
-    "https://bhawnatourandtravels.com/taxi-booking/images/gallery8.jpg",
+    "https://content.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-vyk9s1dlnh.jpg?imwidth=128",
+    "https://content.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-oz2zml5jg7.jpg?imwidth=128",
+    "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-4ymtf39qf5.jpg",
+    "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-em603q9hug.jpg",
+    "https://content.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-008revplff.jpg?imwidth=128",
+    "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-mox6u7ukby.jpg",
+    "https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-zhabxm293c.jpg",
+    "https://content.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-mbmjk995j6.jpg?imwidth=128",
   ];
 
   return (
@@ -22,9 +22,10 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
+              whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
+              viewport={{ once: false, amount: 0.2 }} // Animation repeats on re-entry
               className="relative aspect-square rounded-lg overflow-hidden shadow-lg group"
             >
               <img

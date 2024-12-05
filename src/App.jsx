@@ -10,8 +10,11 @@ import second from "./assets/2.jpg";
 import third from "./assets/3.jpg";
 import { motion } from "framer-motion";
 import { ImagesSlider } from "./components/ImagesSlider";
+import WhyChoose from "./components/WhyChoose";
+import AboutUs from "./components/AboutUs";
+import Details from "./components/Deatil";
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const images = [first, second, third];
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
@@ -29,7 +32,7 @@ function App() {
           backgroundImage: `url(${third})`,
         }}
         id="home"
-        className="pt-22 h-[100vh] bg-blue-100 dark:bg-blue-800 text-gray-100  bg-right  bg-cover bg-no-repeat "
+        className="pt-22 h-[100vh] bg-blue-100 dark:bg-blue-800 text-gray-100  bg-right  bg-cover bg-no-repeat  "
       >
         <motion.div
           initial={{ opacity: 0, y: -80 }}
@@ -52,7 +55,9 @@ function App() {
           </motion.a>
         </motion.div>
       </ImagesSlider>
-
+      <AboutUs darkMode={darkMode}></AboutUs>
+      <WhyChoose darkMode={darkMode}></WhyChoose>
+      <Details darkMode={darkMode}></Details>
       {/* Vehicles Section */}
       <section id="services" className="py-16 px-6">
         <div className="max-w-7xl mx-auto">

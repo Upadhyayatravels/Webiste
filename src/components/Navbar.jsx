@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../assets/logo.jpg"
+import Logo from "../assets/logo.jpg";
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showContact, setShowContact] = useState(false);
@@ -176,6 +176,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </div>
             <div className="space-y-4 text-gray-700 dark:text-gray-200">
               <p>📞 +9180060 80021</p>
+              <p>📞 + 9180060 80009</p>
               <p>📧 info@travelease.com</p>
               <p>🕒 Mon-Sat: 9AM-6PM</p>
             </div>
