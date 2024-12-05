@@ -41,7 +41,7 @@ const WhyChoose = ({ darkMode }) => {
       }}
       id="why-choose-us"
       className={`py-0 px-6 transition-colors duration-300 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900 "
       }`}
     >
       <div className="max-w-7xl mx-auto">

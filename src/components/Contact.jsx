@@ -32,7 +32,7 @@ const Contact = ({ darkMode }) => {
     <motion.section
       id="contact"
       className={`py-12 ${
-        darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-100 text-gray-800"
+        darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-100 text-gray-800 "
       }`}
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 50 }}

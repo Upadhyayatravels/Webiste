@@ -10,7 +10,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const toggleContact = () => setShowContact(!showContact);
 
   return (
-    <nav className="fixed w-full z-50 bg-white dark:bg-dark-800 shadow-lg transition-colors duration-300">
+    <div className="fixed w-full z-50 bg-white dark:bg-dark-800 shadow-lg transition-colors duration-300 ">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-18">
           <motion.div
@@ -183,7 +183,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </div>
   );
 };
 
