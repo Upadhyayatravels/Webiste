@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../assets/logo.jpg";
+import Logo from "../assets/Logo.jpg"
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showContact, setShowContact] = useState(false);
