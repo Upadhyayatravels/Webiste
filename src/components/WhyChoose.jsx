@@ -13,13 +13,40 @@ const WhyChoose = ({ darkMode }) => {
       title: "Personalized Service",
       description:
         "We take pride in offering personalized service that caters to your individual needs. By understanding your preferences, we create tailor-made experiences that match your style and expectations.",
-      icon: "🎯", // Replace with an actual icon or image
+      icon: "🎯",
     },
     {
       title: "Customer Satisfaction",
       description:
         "Your satisfaction is our top priority. From the moment you contact us to the moment you return from your trip, we’re here to ensure your travel experience is smooth, enjoyable, and memorable.",
-      icon: "🌟", // Replace with an actual icon or image
+      icon: "🌟",
+    },
+    {
+      title: "Wide Range of Vehicles",
+      description:
+        "From compact cars to large buses like Mini Buses and Tempo Travellers, we cater to all needs.",
+      icon: "🚗",
+    },
+    {
+      title: "Customizable Packages",
+      description: "Flexible one-time or monthly rental options.",
+      icon: "📦",
+    },
+    {
+      title: "Trusted Fleet",
+      description: "Thorough safety checks for all vehicles.",
+      icon: "🚚",
+    },
+    {
+      title: "Corporate & Institutional Services",
+      description:
+        "Reliable transport for schools, colleges, government offices, and corporate clients.",
+      icon: "📊",
+    },
+    {
+      title: "24/7 Support",
+      description: "Assistance with bookings and queries at any time",
+      icon: "🌗",
     },
   ];
 
@@ -40,12 +67,12 @@ const WhyChoose = ({ darkMode }) => {
         delay: 0.3,
       }}
       id="why-choose-us"
-      className={`py-0 px-6 transition-colors duration-300 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900 "
+      className={`py-16 px-6 transition-colors duration-300 ${
+        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900 pb-10 "
       }`}
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-20">
+        <h2 className="text-3xl font-bold text-center mb-6">
           Why You Should Use UPADHYAYA TOURS AND TRAVELS
         </h2>
         <motion.div

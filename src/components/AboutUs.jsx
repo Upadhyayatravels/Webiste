@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import Logo from "../assets/logo.jpg";
+import OurStory from "./OurStory";
+import firstvideo from "../assets/firstvide.mp4";
 const AboutUs = ({ darkMode }) => {
   return (
     <div
       className={`min-h-screen ${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
+        darkMode
+          ? "bg-gray-900 text-white pt-20"
+          : "bg-gray-100 text-gray-900 pt-20  "
       }`}
     >
       <section id="about" className="py-16">
@@ -17,20 +21,38 @@ const AboutUs = ({ darkMode }) => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-center md:text-left mb-4">
-                About Us
+              <h2 className=" text-3xl md:text-4xl  bg-orange-200 text-orange-500 w-fit rounded-lg p-2 text-center md:text-left mb-4">
+                ABOUT US
               </h2>
-              <p className="text-xl mb-6">
-                We are a passionate team dedicated to providing excellent
-                services in the transportation industry. With years of
-                experience, we aim to provide our customers with the most
-                comfortable, safe, and reliable travel experience possible.
+              <p
+                className={`text-xl mb-6 ${
+                  darkMode
+                    ? "bg-gray-900 text-white"
+                    : "bg-gray-100 text-gray-800"
+                }`}
+              >
+                Welcome to Upadhyaya Tour and Travels, your trusted partner for
+                vehicle rentals and hassle-free transportation services. We
+                specialize in providing high-quality vehicles, including{" "}
+                <span className="font-semibold ">
+                  Tempo Traveller, Mini Bus, Large Buses, Innova Crysta, Dzire,
+                  WagonR, and Ertiga, ideal for corporate trips, school
+                  excursions, college tours, government and private sector
+                  travel, and long-term rentals.
+                </span>
               </p>
-              <p className="text-xl">
-                Our mission is to offer customized travel solutions that suit
-                your needs. Whether you're planning a family trip, a corporate
-                outing, or a destination event, we ensure you travel in style
-                and comfort.
+              <p
+                className={`text-xl mb-6 ${
+                  darkMode
+                    ? "bg-gray-900 text-white"
+                    : "bg-gray-100 text-gray-800"
+                }`}
+              >
+                Our well-maintained fleet ensures comfort, safety, and
+                convenience for individuals, schools, colleges, corporations,
+                and government offices. We offer flexible booking options and
+                competitive rental rates for both direct customers and
+                institutional clients*.
               </p>
             </motion.div>
 
@@ -41,15 +63,19 @@ const AboutUs = ({ darkMode }) => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              <img
-                src="https://images.jdmagicbox.com/v2/comp/ghaziabad/a8/011pxx11.xx11.240709201213.i3a8/catalogue/upadhyaya-tours-and-travels-govindpuram-ghaziabad-taxi-services-s0tmc7lcqi.jpg" // Replace with your image
-                alt="About Us"
-                className="w-full rounded-3xl shadow-lg"
+              <video
+                src={firstvideo}
+                autoPlay
+                muted
+                loop
+                controls
+                className="w-full shadow-lg"
               />
             </motion.div>
           </div>
         </div>
       </section>
+      <OurStory darkMode={darkMode}></OurStory>
     </div>
   );
 };

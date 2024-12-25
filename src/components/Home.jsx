@@ -1,11 +1,16 @@
 import React from "react";
 import { ImagesSlider } from "./ImagesSlider";
-import first from "../assets/first.jpg";
-import second from "../assets/2.jpg";
-import third from "../assets/3.jpg";
+import first from "../assets/f1.jpeg";
+import second from "../assets/f2.jpeg";
+import third from "../assets/f3.jpeg";
+import fourth from "../assets/f4.jpeg";
+import g1 from "../assets/g1.jpg"
 import { motion } from "framer-motion";
+import sixth from "../assets/sixth.jpeg"
 function Home() {
-  const images = [first, second, third];
+  const images = [first, second, third,fourth,g1,sixth];
+ 
+  
   return (
     <div id="home" className="py-16 bg-white dark:bg-dark-800 ">
       <ImagesSlider

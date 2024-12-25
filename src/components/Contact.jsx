@@ -48,7 +48,7 @@ const Contact = ({ darkMode }) => {
         >
           Contact Us
         </motion.h2>
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="sm:grid md:grid-cols-4 gap-8">
           {/* Left Form Section */}
           <motion.div
             className={`${
@@ -188,7 +188,7 @@ const Contact = ({ darkMode }) => {
           <motion.div
             className={`${
               darkMode ? "bg-gray-700" : "bg-white"
-            } p-6 rounded-lg shadow-md md:col-span-1    `}
+            } p-6 mt-5 sm:mt-0  rounded-lg shadow-md  md:col-span-1    `}
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 50 }}
             transition={{ duration: 0.8 }}
@@ -202,22 +202,43 @@ const Contact = ({ darkMode }) => {
                 <p>
                   <span className="font-medium">Address:</span>
                   <br />
-                  Hapur Uttar Pradesh
+                  Infront of Arya Samaj Mandir, Delhi Garh Road, Hapur-245101
+                </p>
+                <p>
+                  <span className="font-medium">Branch2:</span>
+                  <br />
+                  D588, Block 1,D-Block,Govindpuram,Ghaziabad,Uttar Pradesh
+                  201013
+                </p>
+                <p>
+                  <span className="font-medium">Branch3:</span>
+                  <br />
+                  Indra Chawk, Hapur Rd, Jattiwara,Meerut,Uttar Pradesh 250002
                 </p>
                 <p>
                   <span className="font-medium">Phone:</span>
+                  <br className="flex-row" />
+                  <a className="underline" id="call" href="tel:+918006080021">
+                    +918006080021
+                  </a>
                   <br />
-                  +918006080021 / +918006080009
+                  <a className="underline" href="tel:+918006080009">
+                    +918006080009
+                  </a>
+                  <br />
+                  <a className="underline" href="tel:+919837311202">
+                    +919837311202
+                  </a>
                 </p>
                 <p>
                   <span className="font-medium">Email:</span>
                   <br />
-                  random@gmail.com
+                  Aayu7007@gmail.com
                 </p>
                 <p>
                   <span className="font-medium">Working Hours:</span>
                   <br />
-                  Monday - Saturday: 9:00 AM - 6:00 PM
+                  Monday - Sunday: 9:00 AM - 9:00 PM
                 </p>
               </div>
             </div>

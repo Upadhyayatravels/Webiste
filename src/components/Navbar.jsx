@@ -1,82 +1,99 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../assets/logo.jpg";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = ({ darkMode, setDarkMode }) => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [showContact, setShowContact] = useState(false);
+
+  const gotohome = () => {
+    navigate("/");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top of the page.
+    }, 0);
+    if (isOpen) toggleMenu(); // Close the menu if it's open.
+  };
+
+  const gotoabout = () => {
+    navigate("/aboutus");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top of the page.
+    }, 0);
+    if (isOpen) toggleMenu(); // Close the menu if it's open.
+  };
+
+  const navigateToSection = (sectionId) => {
+    navigate("/"); // Ensure you're on the home page first.
+    setTimeout(() => {
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 1000); // Small timeout to ensure the DOM is updated after navigation.
+    if (isOpen) toggleMenu(); // Close the menu if it's open.
+  };
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleContact = () => setShowContact(!showContact);
 
   return (
-    <div className="fixed w-full z-50 bg-white dark:bg-dark-800 shadow-lg transition-colors duration-300 ">
+    <div className="fixed w-full z-50 bg-white dark:bg-dark-800 shadow-lg transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-18">
-          <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 10,
-              delay: 0.2,
-            }}
-            className="flex-shrink-0 flex gap-2 sm:gap-5 "
-          >
+          {/* Logo */}
+          <div className="flex-shrink-0 flex gap-2 sm:gap-5">
             <img
               className="w-10 sm:w-14 sm:h-14 h-10 rounded-full"
               src={Logo}
-              alt=""
+              alt="Logo"
             />
-            <h1 className="text-sm sm:text-lg font-bold text-blue-600 dark:text-blue-400 flex justify-center items-center">
+            <h1 className="text-sm sm:text-lg font-bold text-blue-600 dark:text-blue-400 flex items-center">
               UPADHYAYA TOURS <br /> AND TRAVELS
             </h1>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: -200 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 10,
-              delay: 1 * 0.05 + 0.2,
-            }}
-            className="hidden md:flex items-center space-x-8"
-          >
-            <a
-              href="#home"
+          {/* Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={gotohome}
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               Home
-            </a>
-            <a
-              href="#about"
+            </button>
+            <button
+              onClick={gotoabout}
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               About Us
-            </a>
-            <a
-              href="#services"
+            </button>
+            <button
+              onClick={() => navigateToSection("#fleet")}
+              className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+            >
+              Our Fleets
+            </button>
+            <button
+              onClick={() => navigateToSection("#services")}
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               Services
-            </a>
-            <a
-              href="#details"
+            </button>
+            <button
+              onClick={() => navigateToSection("#details")}
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               Details
-            </a>
-            <motion.button
+            </button>
+            <button
               onClick={toggleContact}
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
             >
               Contact Us
-            </motion.button>
+            </button>
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-700"
@@ -87,8 +104,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 <FaMoon className="text-gray-700" />
               )}
             </button>
-          </motion.div>
+          </div>
 
+          {/* Mobile Menu */}
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
@@ -100,54 +118,51 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 <FaMoon className="text-gray-700" />
               )}
             </button>
-            <motion.button
+            <button
               onClick={toggleMenu}
               className="text-gray-700 dark:text-gray-200"
-              whileTap={{ scale: 0.95 }}
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>
 
+      {/* Mobile Menu Content */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden"
+            className="md:hidden bg-white dark:bg-dark-800"
           >
-            <div className="px-6 pt-4 pb-6 space-y-3 bg-white dark:bg-dark-800">
-              <a
-                href="#home"
-                className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              >
+            <div className="px-6 pt-4 pb-6 space-y-3 text-gray-700 dark:text-gray-200">
+              <button onClick={gotohome} className="block text-left py-2">
                 Home
-              </a>
-              <a
-                href="#about"
-                className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              >
+              </button>
+              <button onClick={gotoabout} className="block text-left py-2">
                 About Us
-              </a>
-              <a
-                href="#services"
-                className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+              </button>
+              <button
+                onClick={() => navigateToSection("#fleet")}
+                className="block text-left py-2"
+              >
+                Our Fleets
+              </button>
+              <button
+                onClick={() => navigateToSection("#services")}
+                className="block text-left py-2"
               >
                 Services
-              </a>
-              <a
-                href="#details"
-                className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+              </button>
+              <button
+                onClick={() => navigateToSection("#details")}
+                className="block text-left py-2"
               >
                 Details
-              </a>
-              <button
-                onClick={toggleContact}
-                className="block w-full text-left py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              >
+              </button>
+              <button onClick={toggleContact} className="block text-left py-2">
                 Contact Us
               </button>
             </div>
@@ -155,6 +170,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         )}
       </AnimatePresence>
 
+      {/* Contact Modal */}
       <AnimatePresence>
         {showContact && (
           <motion.div
@@ -175,10 +191,26 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </button>
             </div>
             <div className="space-y-4 text-gray-700 dark:text-gray-200">
-              <p>📞 +9180060 80021</p>
-              <p>📞 + 9180060 80009</p>
-              <p>📧 info@travelease.com</p>
-              <p>🕒 Mon-Sat: 9AM-6PM</p>
+              <a id="call" href="tel:+918006080021">
+                📞 <span className="underline">+918006080021</span>
+              </a><br />
+              <a id="call" href="tel:+918006080009">📞 <span className="underline">+918006080009</span> </a><br />
+              <a id="call" href="tel:+919837311202">📞 <span className="underline">+919837311202</span> </a><br />
+              <p>
+                <b>Main Branch Address:</b> Infront of Arya Samaj Mandir, Delhi
+                Garh Road, Hapur-245101
+              </p>
+              <p>
+                <b>Branch2:</b> D588, Block
+                1,D-Block,Govindpuram,Ghaziabad,Uttar Pradesh 201013
+              </p>
+              <p>
+                <b>Branch3:</b> Indra Chawk, Hapur Rd, Jattiwara,Meerut,Uttar
+                Pradesh 250002
+              </p>
+
+              <p>📧 Aayu7007@gmail.com</p>
+              <p>🕒 Mon-Sun: 9AM-9PM</p>
             </div>
           </motion.div>
         )}
