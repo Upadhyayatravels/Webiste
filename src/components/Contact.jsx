@@ -233,7 +233,8 @@ const Contact = ({ darkMode }) => {
                 <p>
                   <span className="font-medium">Email:</span>
                   <br />
-                  Aayu7007@gmail.com
+                  <p>Aayu7007@gmail.com</p>
+                  <p>Upadhyayatravels@gmail.com</p>
                 </p>
                 <p>
                   <span className="font-medium">Working Hours:</span>

@@ -210,6 +210,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </p>
 
               <p>📧 Aayu7007@gmail.com</p>
+              <p>Upadhyayatravels@gmail.com</p>
               <p>🕒 Mon-Sun: 9AM-9PM</p>
             </div>
           </motion.div>
